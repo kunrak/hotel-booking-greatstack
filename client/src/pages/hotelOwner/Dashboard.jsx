@@ -56,7 +56,7 @@ function Dashboard() {
           <tr>
             <th className="py-3 px-4 text-gray-800 font-medium">User Name</th>
             <th className="py-3 px-4 text-gray-800 font-medium">Room Name</th>
-            <th className="py-3 px-4 text-gray-800 font-medium">Total Amout</th>
+            <th className="py-3 px-4 text-gray-800 font-medium">Total Amount</th>
             <th className="py-3 px-4 text-gray-800 font-medium">
               Payment Status
             </th>
