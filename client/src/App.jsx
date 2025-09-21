@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "./components/Navbar.jsx";
 import { Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home.jsx";
@@ -11,14 +11,18 @@ import Layout from "./pages/hotelOwner/Layout.jsx";
 import Dashboard from "./pages/hotelOwner/Dashboard.jsx";
 import AddRoom from "./pages/hotelOwner/AddRoom.jsx";
 import ListRoom from "./pages/hotelOwner/ListRoom.jsx";
+import { Toaster } from "react-hot-toast";
+import { useAppContext } from "./context/AppContext.jsx";
 
 const App = () => {
   const inOwnerPath = useLocation().pathname.includes("owner");
+  const { showHotelReg } = useAppContext();
 
   return (
     <div>
+      <Toaster />
       {!inOwnerPath && <Navbar />}
-      {false && <HotelReg />}
+      {showHotelReg && <HotelReg />}
       <div className="min-h-[70vh]">
         <Routes>
           <Route path="/" element={<Home />} />
