@@ -128,7 +128,7 @@ function Navbar() {
         ) : (
           <button
             onClick={openSignIn}
-            className={`px-8 py-2.5 rounded-full ml-4 transition-all duration-500 ${
+            className={`px-8 py-2.5 rounded-full ml-4 cursor-pointer transition-all duration-500 ${
               isScrolled ? "text-white bg-black" : "bg-white text-black"
             }`}
           >
